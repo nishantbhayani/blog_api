@@ -56,7 +56,7 @@ class DataBaseHandler(object):
             self.cursor.execute(add_blog, blog_data)
             self.db.commit()
         except:
-            logging.Error("Error while inserting blog")
+            logging.error("Error while inserting blog")
 
         return True
 
@@ -69,7 +69,7 @@ class DataBaseHandler(object):
             self.cursor.execute(update_blog)
             self.db.commit()
         except:
-            logging.Error("Error while updating blog")
+            logging.error("Error while updating blog")
         return True
 
     def delete(self, id):
@@ -80,5 +80,5 @@ class DataBaseHandler(object):
             self.cursor.execute(delete_blog)
             self.db.commit()
         except:
-            logging.Error("Error while updating blog")
+            logging.error("Error while updating blog")
         return True
